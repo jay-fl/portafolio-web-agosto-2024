@@ -1,10 +1,12 @@
+import { cn } from "@/libs/utils";
+
 interface TitleProps {
     title: string;
-
+    className?: string;
 }
 
-const Title = ({title}: TitleProps) => {
-    return ( <h1 className="text-3xl font-light text-white my-10">
+const Title = ({title, className}: TitleProps) => {
+    return ( <h1 className={cn('text-3xl font-light text-white my-10', className)}>
         {title}
     </h1> );
 }
